@@ -9,7 +9,7 @@ Yes, that was the first option I checked. But I noticed I will soon need to touc
 
 ### Update 04
 
-*NEW CONTROL TYPE -- touchspinner*. 
+**NEW CONTROL TYPE -- touchspinner 
 
 Spinner Control added with Mobile Touch support. Horizontal as well as Vertical layout of spinner control is possible. Lot of other settings available to customize the control's functionality. Check WiKi Pages for more information.
 
