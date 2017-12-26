@@ -7,22 +7,37 @@ Yes, that was the first option I checked. But I noticed the kind of changes I'm 
 
 ## What's New
 
-**Update 04**
+#### Update 04
 
-- NEW CONTROL TYPE -- touchspinner. Spinner Control added with Mobile Touch support. Horizontal as well as Vertical layout of spinner control is possible. Lot of other settings available to customize the control's functionality. Check WiKi Pages for more information.
+*NEW CONTROL TYPE -- touchspinner*. 
 
-**Update 03**
+Spinner Control added with Mobile Touch support. Horizontal as well as Vertical layout of spinner control is possible. Lot of other settings available to customize the control's functionality. Check WiKi Pages for more information.
 
-- NEW CONTROL TYPE -- bootstrap_toggle. Better alternative for On/Off control type. Completely backword compatible with On/Off, with lot of settings available to customize it. Check WiKi Pages for more information.
-- NEW CONTROL TYPE -- iconpicker. Offer a visual control to the User to pick the icon. Several different Icon Fonts supported. Check WiKi Pages for more information.
+#### Update 03
 
-**Update 02**
+**NEW CONTROL TYPE -- bootstrap_toggle**
 
-- NEW CONTROL TYPE -- editor. Integrated "SummerNote" WYSIWYG HTML editor as an alternative for TinyMCE. Works perfectly well in Metabox as well. Check the Wiki Pages for more information
-- NEW CONTROL TYPE -- masked_textbox. Integrated Masked Input Textbox. Now you can offer masked textbox. Check the WiKi Pages for more information
-- Support for Columns added. Now you can arrange your controls in columns on single like (like Bootstrap Row/Col)
+Better alternative for On/Off control type. Completely backword compatible with On/Off, with lot of settings available to customize it. Check WiKi Pages for more information.
 
-**Update 01**
+**NEW CONTROL TYPE -- iconpicker** 
+
+Offer a visual control to the User to pick the icon. Several different Icon Fonts supported. Check WiKi Pages for more information.
+
+#### Update 02
+
+**NEW CONTROL TYPE -- editor** 
+
+Integrated "SummerNote" WYSIWYG HTML editor as an alternative for TinyMCE. Works perfectly well in Metabox as well. Check the Wiki Pages for more information
+
+**NEW CONTROL TYPE -- masked_textbox** 
+
+Integrated Masked Input Textbox. Now you can offer masked textbox. Check the WiKi Pages for more information
+
+**Columns to arrange controls in one line**
+
+Support for Columns added. Now you can arrange your controls in columns on single like (like Bootstrap Row/Col). Defne Class as col-1 through col-12 in such a way that the addition of "n" in "col-n" in one line equals to 12. Check Wiki Pages for more information.
+
+#### Update 01
 
 - jQuery updated to the latest version
 - Bootstrap updated to the latest version
