@@ -7,9 +7,14 @@ Yes, that was the first option I checked. But I noticed I will soon need to touc
 
 ## How to use?
 
-It's simple. Download the master branch as ZIP file. Extract the content somewhere in a new empty folder. Now, create a directory under the root of your theme/plugin and copy the content of "dist" folder to your newly created directory. Let's say you've created a directory "admin/framework" under the root; in this scenario, copy following lines of code to your "functions.php" file.
+It's simple. 
 
-````php
+1. Download the master branch as ZIP file. Extract the content somewhere in a new empty folder. 
+1. Now, create a directory under the root of your theme/plugin 
+1. Copy the content of "dist" folder to your newly created directory. 
+1. Let's say you've created a directory "admin/framework" under the root; in this scenario, copy following lines of code to your "functions.php" file.
+
+```php
 /**********************************************
     THEME OPTIONS
 ***********************************************/
@@ -21,7 +26,7 @@ function ot_theme_options_header() {
     return 'Theme Options';
 }
 include_once('admin/framework/ot-loader.php');
-````
+```
 
 That's it. Now, create a separate file, say "theme-options.php" and include this file with ````required_once```` AFTER the above framework initialization code. Refer Wiki pages for creating your own theme options and metaboxes.
 
