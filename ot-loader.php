@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: OptionTree
+ * Plugin Name: OptionTree (Extended)
  * Plugin URI:  https://github.com/ruturaaj/option-tree-extended
- * Description: Theme Options UI Builder for WordPress. A simple way to create & save Theme Options and Meta Boxes for free or premium themes.
+ * Description: Options Framework originally developed by Derek Herman. This is extended version of the same with changes in core code and additional control types added. There is no backward compatibility with the original version. So, please uninstall the OptionTree before you use OptionTree (Extended). 
  * Version:     2.9.0
  * Author:      Ruturaaj (Original code by Derek Herman)
  * Author URI:  http://www.inovacreations.com
