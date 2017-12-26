@@ -5,7 +5,7 @@ Option Tree is a popular WordPress Options Framework. This is an extended and im
 
 Yes, that was the first option I checked. But I noticed I will soon need to touch the base-code of the Core of Framework in order to achieve the desired performance, flexibility and ease. I felt forking the original will make dealing with the versions and updates (if at all any released by the original framework programmers) difficult for me and so I decided to have my own repository for Option Framework. The credit for original code still goes to the makers and I owe a big thanks to them for all their hard work.
 
-**How to use?**
+## How to use?
 
 It's simple. Download the master branch as ZIP file. Extract the content somewhere in a new empty folder. Now, create a directory under the root of your theme/plugin and copy the content of "dist" folder to your newly created directory. Let's say you've created a directory "admin/framework" under the root; in this scenario, copy following lines of code to your "functions.php" file.
 
