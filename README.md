@@ -5,7 +5,7 @@ Option Tree is a popular WordPress Options Framework. This is an extended and im
 
 Yes, that was the first option I checked. But I noticed I will soon need to touch the base-code of the Core of Framework in order to achieve the desired performance, flexibility and ease. I felt forking the original will make dealing with the versions and updates (if at all any released by the original framework programmers) difficult for me and so I decided to have my own repository for Option Framework. The credit for original code still goes to the makers and I owe a big thanks to them for all their hard work.
 
-> Please uninstall it before you start using OptionTree (Extended). However, you will not need to make any changes in your OptionTree options. The options array you created with the previous version will still work flawless with this Extended version. 
+> Please uninstall OptionTree before you start using OptionTree (Extended). However, you will not need to make any changes in your OptionTree options. The options array you created with the previous version will still work flawless with this Extended version. 
 
 ## What's New
 
