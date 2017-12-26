@@ -1,4 +1,4 @@
-# Option Tree Advanced
+# Option Tree (Extended)
 Option Tree is a popular WordPress Options Framework. This is an extended and improved version of the original Framework with changes in core code and some new useful fields added. The original Option Tree Framework can still be found at it's [official GIT Repository](https://github.com/valendesigns/option-tree).  
 
 **Why not to fork the existing Repository?**
