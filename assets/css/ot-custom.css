@@ -1,0 +1,134 @@
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+/** Columns **/
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .col-1-wrap {width: 8.33%; display: inline-block; }
+    .col-2-wrap {width: 16.66%; display: inline-block; }
+    .col-3-wrap {width: 25%; display: inline-block; }
+    .col-4-wrap {width: 33.33%; display: inline-block; }
+    .col-5-wrap {width: 41.66%; display: inline-block; }
+    .col-6-wrap {width: 50%; display: inline-block; }
+    .col-7-wrap {width: 58.33%; display: inline-block; }
+    .col-8-wrap {width: 66.66%; display: inline-block; }
+    .col-9-wrap {width: 75%; display: inline-block; }
+    .col-10-wrap {width: 83.33%; display: inline-block; }
+    .col-11-wrap {width: 91.66%; display: inline-block; }
+    .col-12-wrap {width: 100%; display: inline-block; }
+}
+
+/**
+*   Custom OT Styles
+**/
+
+#option-tree-header-wrap {
+    display: none;
+    height: 50px;
+}
+
+#option-tree-sub-header {
+    margin-top: 2em;
+    border-top: 3px solid #363b3f;
+}
+
+.format-setting-wrap, .option-tree-sortable .format-settings {
+    padding: 10px;
+}
+
+.format-setting-wrap {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 10px 20px 10px;
+}
+
+.format-setting-wrap: {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.format-setting-label {
+    border-bottom: none;
+    margin: 0px;
+}
+
+#option-tree-settings-api .description h3, #option-tree-settings-api .format-setting-label .label, #poststuff .format-setting-label .label {
+    text-align: left;
+}
+
+#option-tree-settings-api .description h3, #option-tree-settings-api .format-setting-label .label, #poststuff .format-setting-label .label {
+    margin: 0;
+}
+
+.option-tree-setting {
+    padding-right: 20px;
+}
+
+input.option-tree-ui-upload-input, input.option-tree-ui-input {
+    font-size: 14px;
+    height: 35px;
+}
+
+.wrap.settings-wrap .ui-tabs-nav li {
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.wrap.settings-wrap .ui-tabs-nav li a:hover, .wrap.settings-wrap .ui-tabs-nav li.ui-state-active a {
+    font-weight: bold;
+}
+
+
+/* Metabox Styles */
+#poststuff .ot-metabox-wrapper .format-setting-label .label {
+    font-size: 14px;
+}
+
+.ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-active a {
+    background: #ddd;
+}
+
+.ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li a {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 5px 10px 12px;
+}
+
+.option-tree-setting .open {
+    height: 40px;
+}
+
+#titlediv #title-prompt-text {
+    font-size: 1.5em;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+
+#poststuff h2 span {
+    font-weight: bold;
+}
+
+.type-numeric-slider .format-setting-inner {
+    border: none;
+}
+
+.type-iconpicker .input-group {
+    width: 320px;
+}
+
+.type-touchspin .bootstrap-touchspin {
+    width: 320px;
+}
+
+
+@media only screen and (max-width: 320px) {
+    .type-iconpicker .inner-group, .type-touchspin .bootstrap-touchspin {
+        width: 100%;
+    }
+
+}
