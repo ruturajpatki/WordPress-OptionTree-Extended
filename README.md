@@ -7,13 +7,13 @@ Yes, that was the first option I checked. But I noticed the kind of changes I'm 
 
 ## What's New
 
-#### Update 04
+### Update 04
 
 *NEW CONTROL TYPE -- touchspinner*. 
 
 Spinner Control added with Mobile Touch support. Horizontal as well as Vertical layout of spinner control is possible. Lot of other settings available to customize the control's functionality. Check WiKi Pages for more information.
 
-#### Update 03
+### Update 03
 
 **NEW CONTROL TYPE -- bootstrap_toggle**
 
@@ -23,7 +23,7 @@ Better alternative for On/Off control type. Completely backword compatible with 
 
 Offer a visual control to the User to pick the icon. Several different Icon Fonts supported. Check WiKi Pages for more information.
 
-#### Update 02
+### Update 02
 
 **NEW CONTROL TYPE -- editor** 
 
@@ -37,7 +37,7 @@ Integrated Masked Input Textbox. Now you can offer masked textbox. Check the WiK
 
 Support for Columns added. Now you can arrange your controls in columns on single like (like Bootstrap Row/Col). Defne Class as col-1 through col-12 in such a way that the addition of "n" in "col-n" in one line equals to 12. Check Wiki Pages for more information.
 
-#### Update 01
+### Update 01
 
 - jQuery updated to the latest version
 - Bootstrap updated to the latest version
