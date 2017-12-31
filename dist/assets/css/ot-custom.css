@@ -57,6 +57,25 @@ body {
     margin: 0px;
 }
 
+.format-setting.has-desc .description {
+    float: none;
+    width: auto;
+}
+
+.format-setting .select-wrapper {
+    height: 35px;
+    padding-top: 2px;
+}
+
+.option-tree-sortable .format-settings {
+    padding: 0 10px;
+}
+
+.format-setting.has-desc .format-setting-inner {
+    float: none;
+    width: 100%;
+}
+
 #option-tree-settings-api .description h3, #option-tree-settings-api .format-setting-label .label, #poststuff .format-setting-label .label {
     text-align: left;
 }
@@ -121,6 +140,10 @@ input.option-tree-ui-upload-input, input.option-tree-ui-input {
     width: 320px;
 }
 
+.type-iconpicker [class*="col-"] .icon-name {
+    width: 80%;
+}
+
 .type-touchspin .bootstrap-touchspin {
     width: 320px;
 }
@@ -129,6 +152,10 @@ input.option-tree-ui-upload-input, input.option-tree-ui-input {
 @media only screen and (max-width: 320px) {
     .type-iconpicker .inner-group, .type-touchspin .bootstrap-touchspin {
         width: 100%;
+    }
+
+    .type-iconpicker .input-group .icon-name {
+        width: auto;
     }
 
 }

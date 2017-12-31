@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: OptionTree (Extended)
- * Plugin URI:  https://github.com/ruturaaj/option-tree-extended
- * Description: Options Framework originally developed by Derek Herman. This is extended version of the same with changes in core code and additional control types added. There is no backward compatibility with the original version. So, please uninstall the OptionTree before you use OptionTree (Extended). 
- * Version:     2.9.0
- * Author:      Ruturaaj (Original code by Derek Herman)
- * Author URI:  http://www.inovacreations.com
+ * Plugin Name: OptionTree
+ * Plugin URI:  https://github.com/valendesigns/option-tree/
+ * Description: Theme Options UI Builder for WordPress. A simple way to create & save Theme Options and Meta Boxes for free or premium themes.
+ * Version:     2.6.0
+ * Author:      Derek Herman
+ * Author URI:  http://valendesigns.com
  * License:     GPLv3
  * Text Domain: option-tree
  */
@@ -181,7 +181,7 @@ if ( ! class_exists( 'OT_Loader' ) ) {
       /**
        * Current Version number.
        */
-      define( 'OT_VERSION', '2.6.0' );
+      define( 'OT_VERSION', '2.9.0' );
       
       /**
        * For developers: Theme mode.
@@ -342,19 +342,6 @@ if ( ! class_exists( 'OT_Loader' ) ) {
       } else {
         define( 'OT_THEME_URL', get_template_directory_uri() );
       }
-
-      /*if (!defined('OT_ICON_FONTS')) {
-          define ( 'OT_ICON_FONTS', apply_filters('ot_icon_fonts', array(
-            'font-awesome' => 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-            'ionicons' => 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
-            'material-design' => 'https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css',
-            'octicons' => 'https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css',
-            'typicons' => 'https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css',
-            'weather-icons' => 'https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.1/css/weather-icons.min.css',
-            'flag-icons' => 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css',
-            ) ) );
-      }
-      */
       
     }
 
