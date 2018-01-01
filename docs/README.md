@@ -34,6 +34,12 @@ That's it. Now, create a separate file, say "theme-options.php" and include this
 
 ## What's New
 
+### Update 05
+
+**NEW CONTROL TYPE -- email**
+
+Advanced Email Input field which guesses the Domain part of email as you type. Some popular Email Domains are already defined; you can define your own domain names as comma-delimited list. Check Wiki Pages for more information.
+
 ### Update 04
 
 **NEW CONTROL TYPE -- touchspinner** 

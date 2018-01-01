@@ -340,6 +340,81 @@ if (!function_exists('ot_type_touchspin')) {
     }
 }
 
+//------------------------------------------------------------------------------------------------------
+
+/*
+*   Email Autocomplete
+*/
+
+/*
+add_action('ot_admin_styles_after', 'email_nq_styles');
+function email_nq_styles() {
+    wp_enqueue_style( 'email', OT_URL . "assets/vendor/touchspin/css/jquery.bootstrap-touchspin.min.css" , false, '3.1.2' );
+}
+*/
+
+add_action('ot_admin_scripts_before', 'email_nq_scripts');
+function email_nq_scripts() {
+    //wp_enqueue_script( 'jquery20-js', "http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" , array(), '2.0.0' );
+    wp_enqueue_script( 'email-js', OT_URL . "assets/vendor/email-autocomplete/js/jquery.email-autocomplete.min.js" , array('jquery'), '0.1.3' );
+}
+
+if (!function_exists('ot_type_email')) {
+    function ot_type_email( $args = array()) {
+
+        extract($args);
+
+        /* verify a description */
+        $has_desc = $field_desc ? true : false;
+
+        /* format setting outer wrapper */
+        echo '<div class="format-setting type-email ' . ( $has_desc ? 'has-desc' : 'no-desc' ) . '">';
+
+          /* description */
+          echo $has_desc ? '<div class="description">' . htmlspecialchars_decode( $field_desc ) . '</div>' : '';
+
+          /* format setting inner wrapper */
+          echo '<div class="format-setting-inner">';
+
+          $field_settings['placeholder'] = ($field_settings['placeholder'] != '') ? $field_settings['placeholder'] : '';
+          $custom_domains = ($field_settings['domains'] != '') ? $field_settings['domains'] : '';
+
+            if ($custom_domains != '') {
+                if (strpos($custom_domains, ',') !== false) {
+                    $domains = explode(',', $custom_domains);
+                    $my_domains = "[";
+                    foreach($domains as $value) {
+                        $my_domains .= "'" . trim($value) . "',";
+                    }
+                    $my_domains .= "]";
+                }
+                else {
+                    $my_domains = "['". $custom_domains . "']";
+                }
+            }
+            else {
+                $my_domains = '';
+            }
+
+            /* build control */
+            echo '<input type="email" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" name="'. esc_attr($field_name) . '" id="'. esc_attr($field_id) . '">';
+            echo "<script>
+            (function($){
+                $(function() {
+                  $('#". esc_attr($field_id) . "').emailautocomplete({domains: ". $my_domains . " });
+                  });
+              }(jQuery));
+            </script>";
+          echo '</div>';
+
+        echo '</div>';
+
+    }
+}
+
+
+
+
 
 
 

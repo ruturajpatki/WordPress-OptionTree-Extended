@@ -148,6 +148,11 @@ input.option-tree-ui-upload-input, input.option-tree-ui-input {
     width: 320px;
 }
 
+/* email autocomplete suggestion text */
+span.eac-sugg {
+    color: #aaa !important;
+}
+
 
 @media only screen and (max-width: 320px) {
     .type-iconpicker .inner-group, .type-touchspin .bootstrap-touchspin {
