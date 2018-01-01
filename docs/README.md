@@ -11,7 +11,7 @@ It's simple.
 
 1. Download the master branch as ZIP file. Extract the content somewhere in a new empty folder. 
 1. Now, create a directory under the root of your theme/plugin 
-1. Copy the content of "dist" folder to your newly created directory. 
+1. Copy the content of "framework" folder to your newly created directory. 
 1. Let's say you've created a directory "admin/framework" under the root; in this scenario, copy following lines of code to your "functions.php" file.
 
 ```php
