@@ -397,7 +397,7 @@ if (!function_exists('ot_type_email')) {
             }
 
             /* build control */
-            echo '<input type="email" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" name="'. esc_attr($field_name) . '" id="'. esc_attr($field_id) . '">';
+            echo '<input type="email" value="'. esc_attr($field_value) . '" class="widefat option-tree-ui-input ' . esc_attr( $field_class ) . '" name="'. esc_attr($field_name) . '" id="'. esc_attr($field_id) . '">';
             echo "<script>
             (function($){
                 $(function() {
@@ -405,6 +405,70 @@ if (!function_exists('ot_type_email')) {
                   });
               }(jQuery));
             </script>";
+          echo '</div>';
+
+        echo '</div>';
+
+    }
+}
+
+//------------------------------------------------------------------------------------------------------
+
+/*
+*   Clockpicker
+*/
+
+add_action('ot_admin_styles_after', 'clockpicker_nq_styles');
+function clockpicker_nq_styles() {
+    wp_enqueue_style( 'clockpicker', OT_URL . "assets/vendor/clockpicker/css/bootstrap-clockpicker.min.css", false, '3.1.2' );
+}
+
+add_action('ot_admin_scripts_before', 'clockpicker_nq_scripts');
+function clockpicker_nq_scripts() {
+    wp_enqueue_script( 'clockpicker-js', OT_URL . "assets/vendor/clockpicker/js/bootstrap-clockpicker.min.js" , array('jquery'), '3.1.2' );
+}
+
+if (!function_exists('ot_type_clockpicker')) {
+    function ot_type_clockpicker( $args = array()) {
+
+        extract($args);
+
+        /* verify a description */
+        $has_desc = $field_desc ? true : false;
+
+        /* format setting outer wrapper */
+        echo '<div class="format-setting type-clockpicker ' . ( $has_desc ? 'has-desc' : 'no-desc' ) . '">';
+
+          /* description */
+          echo $has_desc ? '<div class="description">' . htmlspecialchars_decode( $field_desc ) . '</div>' : '';
+
+          /* format setting inner wrapper */
+          echo '<div class="format-setting-inner">';
+
+            /* build text input */
+            echo '<div id="'. esc_attr($field_id) . '-clockpicker" class="input-group clockpicker">
+                    <input type="text" name="'. esc_attr($field_name) . '" id="'. esc_attr($field_id) . '" class="form-control '. esc_attr($field_class) . '" value="'. esc_attr($field_value) . '">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>';
+
+            $field_settings['done_text'] = ($field_settings['done_text'] != '') ? $field_settings['done_text'] : 'Select';
+            $field_settings['auto_close'] = ($field_settings['auto_close'] != '') ? $field_settings['auto_close'] : 'false';
+            $field_settings['placement'] = ($field_settings['placement'] != '') ? $field_settings['placement'] : 'top';
+            $field_settings['align'] = ($field_settings['align'] != '') ? $field_settings['align'] : 'left';
+            $default = ($field_value != '') ? $field_value : 'now';
+
+            echo "<script>$(function() {
+                    $('#". esc_attr($field_id) . "-clockpicker').clockpicker({
+                        donetext: '". $field_settings['done_text'] . "',
+                        autoclose: ". $field_settings['auto_close'] . ",
+                        default: '". $default . "',
+                        placement: '". $field_settings['placement'] . "',
+                        align: '". $field_settings['align'] . "',
+                    });
+                });</script>";
+
           echo '</div>';
 
         echo '</div>';

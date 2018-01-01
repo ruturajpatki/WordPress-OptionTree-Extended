@@ -153,6 +153,11 @@ span.eac-sugg {
     color: #aaa !important;
 }
 
+/* clockpicker field */
+.clockpicker {
+    width: 150px !important;
+}
+
 
 @media only screen and (max-width: 320px) {
     .type-iconpicker .inner-group, .type-touchspin .bootstrap-touchspin {

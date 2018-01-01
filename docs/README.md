@@ -34,6 +34,12 @@ That's it. Now, create a separate file, say "theme-options.php" and include this
 
 ## What's New
 
+### Update 06
+
+**NEW CONTROL TYPE -- clockpicker**
+
+Clockpicker is an innovative Time Picker control that allows user to select Hour and Minutes by simply dragging the clock-hand. Control can be customized through ```settings```. Check Wiki pages for more information.
+
 ### Update 05
 
 **NEW CONTROL TYPE -- email**
