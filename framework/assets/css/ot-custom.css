@@ -158,6 +158,10 @@ span.eac-sugg {
     width: 150px !important;
 }
 
+/* datedropper */
+.date-dropper {
+    width: 320px !important;
+}
 
 @media only screen and (max-width: 320px) {
     .type-iconpicker .inner-group, .type-touchspin .bootstrap-touchspin {

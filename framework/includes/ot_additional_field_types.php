@@ -476,6 +476,71 @@ if (!function_exists('ot_type_clockpicker')) {
     }
 }
 
+//------------------------------------------------------------------------------------------------------
+
+/*
+*   DateDropper
+*/
+
+add_action('ot_admin_styles_after', 'datedropper_nq_styles');
+function datedropper_nq_styles() {
+    wp_enqueue_style( 'datedropper', OT_URL . "assets/vendor/datedropper/css/datedropper.min.css", false, '3.1.2' );
+}
+
+add_action('ot_admin_scripts_before', 'datedropper_nq_scripts');
+function datedropper_nq_scripts() {
+    wp_enqueue_script( 'datedropper-js', OT_URL . "assets/vendor/datedropper/js/datedropper.min.js" , array('jquery'), '3.1.2' );
+}
+
+if (!function_exists('ot_type_datedropper')) {
+    function ot_type_datedropper( $args = array()) {
+
+        extract($args);
+
+        /* verify a description */
+        $has_desc = $field_desc ? true : false;
+
+        /* format setting outer wrapper */
+        echo '<div class="format-setting type-datedropper ' . ( $has_desc ? 'has-desc' : 'no-desc' ) . '">';
+
+          /* description */
+          echo $has_desc ? '<div class="description">' . htmlspecialchars_decode( $field_desc ) . '</div>' : '';
+
+          /* format setting inner wrapper */
+          echo '<div class="format-setting-inner">';
+
+            $data_attr = "";
+
+            foreach($field_settings as $setting => $value) {
+                $data_attr .= "data-" . $setting . " = '" . $value . "' ";
+            }
+
+            $default_date = "";
+
+            if (esc_attr($field_value) != '') {
+                $value = strtotime(esc_attr($field_value));
+                $default_date = 'data-default-date = "'. date('m/d/Y', $value) . '" ';
+            }
+
+            /* build control */
+            echo "<div class='input-group date-dropper'>
+                    <span class='input-group-addon'><i class='glyphicon glyphicon-calendar'></i></span>
+                    <input type='text' name='". esc_attr($field_name) . "' id='". esc_attr($field_id) . "' value='". esc_attr($field_value) . "' class='form-control ". esc_attr($field_class) . "' data-init-set = 'false' " . $default_date . $data_attr . " />
+                </div>";
+
+            echo "<script>
+                    jQuery(function() {
+                        jQuery('#". esc_attr($field_id) . "').dateDropper();
+                    });
+                </script>";
+
+          echo '</div>';
+
+        echo '</div>';
+        
+    }
+}
+
 
 
 
