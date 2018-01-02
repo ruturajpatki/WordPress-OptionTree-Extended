@@ -36,7 +36,7 @@ That's it. Now, create a separate file, say "theme-options.php" and include this
 
 ### Update 07
 
-**NEW CONTROL TYPE -- datedropper
+**NEW CONTROL TYPE -- datedropper**
 
 Beautiful animations and professional looking date selection control added to the kit. Lot of different ```settings``` avaibale to customize the control. Custom style theme supported to help you customize the look and feel of the control per your theme/plugin requirements. Check Wiki pages for more information.
 
