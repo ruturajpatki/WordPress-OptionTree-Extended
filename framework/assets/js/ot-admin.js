@@ -1294,8 +1294,8 @@
 
 
 /** Summernote **/
-$(document).ready(function() {
-    $('.summernote-editor').summernote({
+jQuery(document).ready(function() {
+    jQuery('.summernote-editor').summernote({
         height: 200,                 // set editor height
         dialogsInBody: true,
         minHeight: null,             // set minimum height of editor

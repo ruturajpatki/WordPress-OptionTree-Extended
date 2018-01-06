@@ -5,12 +5,18 @@
 */
 add_action('ot_admin_styles_before', 'bootstrap_nq_styles');
 function bootstrap_nq_styles() {
-    wp_enqueue_style( 'bootstrap337', apply_filters('ot_bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'), false, '3.3.7' );
+    $current_screen = get_current_screen();
+    if ($current_screen->id == 'appearance_page_ot-theme-options') {
+        wp_enqueue_style( 'bootstrap337', apply_filters('ot_bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'), false, '3.3.7' );
+    }
 }
 
 add_action('ot_admin_scripts_before', 'bootstrap_nq_scripts');
 function bootstrap_nq_scripts() {
-    wp_enqueue_script( 'bootstrap-js', apply_filters('ot_bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'), array('jquery'), '3.3.7' );
+    $current_screen = get_current_screen();
+    if ($current_screen->id == 'appearance_page_ot-theme-options') {
+        wp_enqueue_script( 'bootstrap-js', apply_filters('ot_bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'), array('jquery'), '3.3.7' );
+    }
 }
 
 
@@ -39,7 +45,7 @@ function snote_nq_scripts() {
         /* verify a description */
         $has_desc = $field_desc ? true : false;
 
-        echo '<div class="format-setting type-editor simple ' . ( $has_desc ? 'has-desc' : 'no-desc' ) . '">';
+        echo '<div class="format-setting type-editor ' . ( $has_desc ? 'has-desc' : 'no-desc' ) . '">';
 
              /* description */
             echo $has_desc ? '<div class="description">' . htmlspecialchars_decode( $field_desc ) . '</div>' : '';
@@ -48,8 +54,7 @@ function snote_nq_scripts() {
             echo '<div class="format-setting-inner">';
 
                 /* build textarea for Summernote */
-                echo '<textarea class="summernote-editor ot-html-editor" id="textarea_' . esc_attr( $field_id ) . '" name="' . esc_attr( $field_name ) .'">' . esc_attr( $field_value ) . '</textarea>';
-
+                echo '<textarea class="summernote-editor ot-html-editor '. esc_attr($field_class) . '" id="textarea_' . esc_attr( $field_id ) . '" name="' . esc_attr( $field_name ) .'">' . esc_attr( $field_value ) . '</textarea>';
 
             echo '</div>';
 

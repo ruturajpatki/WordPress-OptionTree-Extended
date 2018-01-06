@@ -163,6 +163,26 @@ span.eac-sugg {
     width: 320px !important;
 }
 
+input.option-tree-ui-input.w320 {
+    width: 320px !important;
+}
+
+input.option-tree-ui-input.w270 {
+    width: 270px !important;
+}
+
+input.option-tree-ui-input.w250 {
+    width: 250px !important;
+}
+
+input.option-tree-ui-input.w200 {
+    width: 200px !important;
+}
+
+input.option-tree-ui-input.w150 {
+    width: 150px !important;
+}
+
 @media only screen and (max-width: 320px) {
     .type-iconpicker .inner-group, .type-touchspin .bootstrap-touchspin {
         width: 100%;
@@ -170,6 +190,10 @@ span.eac-sugg {
 
     .type-iconpicker .input-group .icon-name {
         width: auto;
+    }
+
+    input.option-tree-ui-input.w320, input.option-tree-ui-input.w270, input.option-tree-ui-input.w250, input.option-tree-ui-input.w200, input.option-tree-ui-input.w150 {
+        width: 100% !important;
     }
 
 }
