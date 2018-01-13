@@ -3,10 +3,16 @@
 /**
 * Common Required: Bootstrap
 */
+
+
 add_action('ot_admin_styles_before', 'bootstrap_nq_styles');
 function bootstrap_nq_styles() {
+
     $current_screen = get_current_screen();
-    if ($current_screen->id == 'appearance_page_ot-theme-options') {
+    //print_r($current_screen->post_type);
+    //wp_die('Stop');
+
+    if ($current_screen->id == 'appearance_page_ot-theme-options' || $current_screen->post_type != 'product') {
         wp_enqueue_style( 'bootstrap337', apply_filters('ot_bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'), false, '3.3.7' );
     }
 }
@@ -14,7 +20,7 @@ function bootstrap_nq_styles() {
 add_action('ot_admin_scripts_before', 'bootstrap_nq_scripts');
 function bootstrap_nq_scripts() {
     $current_screen = get_current_screen();
-    if ($current_screen->id == 'appearance_page_ot-theme-options') {
+    if ($current_screen->id == 'appearance_page_ot-theme-options' || $current_screen->post_type != 'product') {
         wp_enqueue_script( 'bootstrap-js', apply_filters('ot_bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'), array('jquery'), '3.3.7' );
     }
 }
